@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position: absolute;
+  top: 0;
+  
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.Colors.Blue_500};
