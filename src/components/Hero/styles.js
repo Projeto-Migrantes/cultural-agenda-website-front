@@ -34,7 +34,7 @@ export const TextSection = styled.div`
 export const IconsSection = styled.div`
   position: absolute;
   top: 0;
-  right: 10px; /* Corrigido para ter unidade */
+  right: 10px;
   width: 352px;
   height: 126px;
 
