@@ -1,5 +1,3 @@
-import styled from "styled-components";
-
 export const HeroContainer = styled.div`
   position: relative;
   top: 0;
@@ -15,9 +13,9 @@ export const HeroContainer = styled.div`
   flex-wrap: wrap;
 
   @media (max-width: 768px) {
-  flex-direction: column;
-  width: 100vw;  /* largura total da viewport */
-  height: 100vh; /* altura total da viewport */
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
   }
 `;
 
@@ -36,7 +34,7 @@ export const TextSection = styled.div`
 export const IconsSection = styled.div`
   position: absolute;
   top: 0;
-  right: 10;
+  right: 10px; /* Corrigido para ter unidade */
   width: 352px;
   height: 126px;
 
@@ -74,14 +72,9 @@ export const CircleSection = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 356px;
+    height: auto;
     padding: 24px;
-    
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 50% 50%;
-    border-bottom-right-radius: 50% 50%;
-
+    border-radius: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,25 +90,20 @@ export const ImageSection = styled.div`
 
   img {
     width: 100%;
-    height: 90%;
+    height: auto;
     object-fit: contain;
     display: block;
-    transform: translateX(244px);
-    margin-top: 124px;
     transition: transform 0.2s ease-in-out;
-    
   }
 
   @media (max-width: 768px) {
-  height: auto;
-  img {
-    width: 100%;
-    transform: none;
-    margin-top: 0;
-    display: block;
-    transform: scale(3.1) translateX(20px);
+    height: auto;
+    img {
+      width: 100%;
+      transform: none;
+      margin-top: 0;
+    }
   }
-}
 `;
 
 export const LoginBox = styled.button`
@@ -173,7 +161,6 @@ export const Text = styled.h1`
   color: white;
   line-height: 131%;
 
-
   @media (max-width: 768px) {
     width: 314px;
     font-size: ${({ theme }) => theme.Font_Size.XL}px;
@@ -182,7 +169,7 @@ export const Text = styled.h1`
 `;
 
 export const TextLogin = styled.p`
- @media (max-width: 768px) {
-  display: none;
- }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
