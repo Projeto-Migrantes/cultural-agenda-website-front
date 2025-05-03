@@ -113,7 +113,7 @@ export const ImageSection = styled.div`
     transform: none;
     margin-top: 0;
     display: block;
-    transform: scale(3.1) translateY(-24px) translateX(20px);
+    transform: scale(3.1) translateX(20px);
   }
 }
 `;
