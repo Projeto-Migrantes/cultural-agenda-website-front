@@ -8,7 +8,7 @@ export const HeroContainer = styled.div`
   width: 100vw;
   overflow: hidden;
 
-  background-color: ${({ theme }) => theme.Colors.White};
+  background-color: ${({ theme }) => theme.Colors.Gray_500};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,8 +54,8 @@ export const IconsSection = styled.div`
 `;
 
 export const CircleSection = styled.div`
-  width: 636px;
-  height: 619px;
+  width: 560px;
+  height: 560px;
   background-color: ${({ theme }) => theme.Colors.Blue_500};
   border-top-right-radius: 46% 50%;
   border-bottom-right-radius: 46% 50%;
@@ -124,15 +124,14 @@ export const LoginBox = styled.button`
   position: absolute;
   top: 0;
   right: 0;
-  width: 352px;
-  height: 126px;
+  width: 280px;
+  height: 100px;
 
   font-size: ${({ theme }) => theme.Font_Size.MD}px;
   color: white;
   line-height: 131%;
 
-  background-color: ${({ theme }) => theme.Colors.Orange_400};
-  padding: 0.75rem 1.5rem;
+  background-color: ${({ theme }) => theme.Colors.Orange_500};
   font-weight: ${({ theme }) => theme.Font_Weight.Bold};
 
   border-top-left-radius: 40% 100%;

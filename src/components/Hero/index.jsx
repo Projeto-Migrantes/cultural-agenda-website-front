@@ -4,13 +4,14 @@ import LoginIcon from "../../assets/UserCircle.png";
 import redeIcon from "../../assets/Group 187.png";
 import cmsIcon from "../../assets/Group 190.png";
 import { Link } from 'react-router-dom';
+import { CgProfile } from "react-icons/cg";
 
 function Hero() {
   return (
     <S.HeroContainer>
       <S.LoginBox as={Link} to="/login">
-        <S.TextLogin>Login/Cadastre-se</S.TextLogin>
-        <img src={LoginIcon} alt="login" />
+        <S.TextLogin>Login / Cadastre-se</S.TextLogin>
+        <CgProfile size={30} />
       </S.LoginBox>
       <S.TextSection>
         <S.CircleSection>
