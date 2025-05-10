@@ -101,22 +101,27 @@ export const ImageSection = styled.div`
     object-fit: contain;
     display: block;
     transform: translateX(244px);
-    margin-top: 124px;
-    transition: transform 0.2s ease-in-out;
-    
+    margin-top: 12vh;
+    transition: transform 0.2s ease-in-out, margin-top 0.2s ease-in-out;
+  }
+
+   @media (min-width: 769px) and (max-width: 1360px) {
+    img {
+      margin-top: 24vh;
+    }
   }
 
   @media (max-width: 768px) {
-  height: auto;
-  img {
-    width: 100%;
-    transform: none;
-    margin-top: 0;
-    display: block;
-    transform: scale(3.1) translateX(20px);
+    height: auto;
+
+    img {
+      width: 100%;
+      margin-top: 4vh;
+      transform: scale(3.1) translateX(20px);
+    }
   }
-}
 `;
+
 
 export const LoginBox = styled.button`
   all: unset;
