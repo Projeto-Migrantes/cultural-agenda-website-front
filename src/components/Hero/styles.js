@@ -1,31 +1,26 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
-  position: relative;
-  top: 0;
-  left: 0;
-
   width: 100vw;
   overflow: hidden;
-
   background-color: ${({ theme }) => theme.Colors.Gray_500};
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 
   @media (max-width: 768px) {
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
+    flex-direction: column;
+    height: 100vh;
   }
 `;
 
 export const TextSection = styled.div`
   display: flex;
   align-items: center;
-  position: relative;
   height: 619px;
+  position: relative;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -36,12 +31,10 @@ export const TextSection = styled.div`
 export const IconsSection = styled.div`
   position: absolute;
   top: 0;
-  right: 10;
   width: 352px;
   height: 126px;
 
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 16px;
@@ -71,21 +64,14 @@ export const CircleSection = styled.div`
 
   @media (max-width: 768px) {
     position: relative;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 356px;
     padding: 24px;
-    
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 50% 50%;
-    border-bottom-right-radius: 50% 50%;
 
-    display: flex;
+    border-radius: 0 0 50% 50%;
+
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
   }
 `;
@@ -105,7 +91,7 @@ export const ImageSection = styled.div`
     transition: transform 0.2s ease-in-out, margin-top 0.2s ease-in-out;
   }
 
-   @media (min-width: 769px) and (max-width: 1360px) {
+  @media (min-width: 769px) and (max-width: 1360px) {
     img {
       margin-top: 24vh;
     }
@@ -122,7 +108,6 @@ export const ImageSection = styled.div`
   }
 `;
 
-
 export const LoginBox = styled.button`
   all: unset;
   cursor: pointer;
@@ -134,8 +119,6 @@ export const LoginBox = styled.button`
 
   font-size: ${({ theme }) => theme.Font_Size.MD}px;
   color: white;
-  line-height: 131%;
-
   background-color: ${({ theme }) => theme.Colors.Orange_500};
   font-weight: ${({ theme }) => theme.Font_Weight.Bold};
 
@@ -143,29 +126,27 @@ export const LoginBox = styled.button`
   border-bottom-left-radius: 40% 100%;
 
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 16px;
-
   z-index: 10;
-
-  img {
-    width: 50px;
-    height: 50px;
-  }
 
   @media (max-width: 768px) {
     width: 40px;
     height: 40px;
     top: 40px;
-    
+
     border-top-left-radius: 60% 80%;
     border-bottom-left-radius: 60% 80%;
 
     justify-content: flex-end;
+  }
 
-    img {
+  img {
+    width: 50px;
+    height: 50px;
+
+    @media (max-width: 768px) {
       width: 36px;
       height: 36px;
     }
@@ -177,7 +158,6 @@ export const Text = styled.h1`
   color: white;
   line-height: 131%;
 
-
   @media (max-width: 768px) {
     width: 314px;
     font-size: ${({ theme }) => theme.Font_Size.XL}px;
@@ -186,7 +166,7 @@ export const Text = styled.h1`
 `;
 
 export const TextLogin = styled.p`
- @media (max-width: 768px) {
-  display: none;
- }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
