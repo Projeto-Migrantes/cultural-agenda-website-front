@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { CgProfile } from "react-icons/cg";
 
 export const HeroContainer = styled.div`
   width: 100vw;
@@ -131,7 +132,7 @@ export const LoginBox = styled.button`
   gap: 16px;
   z-index: 10;
 
-  @media (max-width: 768px) {
+  @media (max-width: 425px) {
     width: 40px;
     height: 40px;
     top: 40px;
@@ -142,14 +143,26 @@ export const LoginBox = styled.button`
     justify-content: flex-end;
   }
 
-  img {
-    width: 50px;
-    height: 50px;
+  @media  (min-width: 425px) and (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
 
-    @media (max-width: 768px) {
-      width: 36px;
-      height: 36px;
-    }
+    border-top-left-radius: 60% 80%;
+    border-bottom-left-radius: 60% 80%;
+
+    justify-content: flex-end;
+  }
+`;
+
+export const ProfileIcon = styled(CgProfile)`
+  width: 30px;
+  height: 30px;
+
+  @media  (min-width: 425px) and (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    margin-right:10px;
   }
 `;
 
@@ -159,7 +172,6 @@ export const Text = styled.h1`
   line-height: 131%;
 
   @media (max-width: 768px) {
-    width: 314px;
     font-size: ${({ theme }) => theme.Font_Size.XL}px;
     margin-top: 120px;
   }
