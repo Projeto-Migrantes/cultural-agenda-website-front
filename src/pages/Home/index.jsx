@@ -1,9 +1,10 @@
 import * as S from "./styles.js";
+import Hero from "../../components/Hero/index.jsx";
 
 function Home() {
   return (
     <S.Container>
-      <S.Title>Venha Conhecer uma Agenda Cultural Sem Fronteiras</S.Title>
+       <Hero />
     </S.Container>
   );
 }
