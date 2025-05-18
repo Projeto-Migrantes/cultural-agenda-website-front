@@ -10,7 +10,7 @@ function Navbar() {
   const currentMonthIndex = currentDate.getMonth();
   const [selectedMonth, setSelectedMonth] = useState(currentMonthIndex);
   const [activeTab, setActiveTab] = useState("events");
-  console.log(`SelectedMonth: ${selectedMonth}` )
+  console.log(`SelectedMonth: ${selectedMonth}`);
 
   const monthNames = Array.from({ length: 12 - currentMonthIndex }, (_, i) =>
     format(setMonth(new Date(), currentMonthIndex + i), "MMMM", { locale: ptBR })
@@ -60,10 +60,6 @@ function Navbar() {
           </S.SelectTrigger>
 
           <S.SelectContent>
-            <S.SelectScrollButton>
-              <ChevronUpIcon />
-            </S.SelectScrollButton>
-
             <S.SelectViewport>
               {monthNames.map((month, index) => {
                 const value = (currentMonthIndex + index).toString();
@@ -79,10 +75,6 @@ function Navbar() {
                 );
               })}
             </S.SelectViewport>
-
-            <S.SelectScrollButton>
-              <ChevronDownIcon />
-            </S.SelectScrollButton>
           </S.SelectContent>
         </S.SelectRoot>
       </S.NavbarContainer>

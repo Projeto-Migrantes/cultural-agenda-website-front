@@ -61,7 +61,6 @@ export const NavLinks = styled.div`
   }
 `;
 
-
 export const LinkItem = styled.a`
   color: ${({ theme }) => theme.Colors.White};
   text-decoration: none;
@@ -77,7 +76,6 @@ export const LinkItem = styled.a`
 
   transition: font-size 0.2s ease-in-out;
 `;
-
 
 export const SelectTrigger = styled(Select.Trigger)`
   all: unset;
@@ -126,11 +124,6 @@ export const SelectItem = styled(Select.Item)`
 export const SelectIcon = styled(Select.Icon)`
   display: flex;
   align-items: center;
-`;
-
-export const SelectScrollButton = styled(Select.ScrollUpButton)`
-  color: #333;
-  padding: 4px;
 `;
 
 export const SelectItemIndicator = styled(Select.ItemIndicator)`
