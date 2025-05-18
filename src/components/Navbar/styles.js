@@ -6,15 +6,24 @@ export const SelectRoot = Select.Root;
 export const NavbarContainer = styled.div`
   display: flex;
   margin: -32px 48px 0 48px;
-  border-radius: 32px;
+  border-radius: 9999px;
   position: fixed;
   z-index: 999999;
   width: calc(100% - 96px);
-  height: 64px; /* Altura da navbar */
+  height: 62px;
 
   justify-content: space-between;
   align-items: center;
    background-color: ${({ theme }) => theme.Colors.Blue_300};
+
+  @media (max-width: 768px) {
+    margin: 0;
+    bottom: 0px;
+    height: 100px;
+    width: 100%;
+    flex-direction: column;
+    background-color: transparent;
+  }
 `;
 
 export const Logo = styled.img`
@@ -25,24 +34,36 @@ export const Logo = styled.img`
 export const NavLinks = styled.div`
   display: flex;
   gap: 16px;  
-  color: white;
+  color: ${({ theme }) => theme.Colors.White};
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer;
-  /* &:hover {
-    text-decoration: underline;
-  } */
+
+  background-color: ${({ theme }) => theme.Colors.Blue_300};
+  border-radius: 9999px;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 10px;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: 32px 0 0 32px;
+    height: 100px;
+    width: 100%;
+    padding-left: 16px;
+    box-sizing: border-box;
+    border-radius: 32px 0 0 32px;
+  }
+
+  @media (min-width: 468px) {
+    justify-content: center;
   }
 `;
 
+
 export const LinkItem = styled.a`
-  color: white;
+  color: ${({ theme }) => theme.Colors.White};
   text-decoration: none;
   cursor: pointer;
   align-items: center;
@@ -51,37 +72,31 @@ export const LinkItem = styled.a`
   padding: 0 20px;
 
   font-family: ${({ theme }) => theme.Font_Family.Regular};
-  font-size: ${({ theme, $event }) =>
-    $event ? `${theme.Font_Size.XL}px` : `${theme.Font_Size.MD}px`};
-    
+  font-size: ${({ theme, $active }) =>
+    $active ? `${theme.Font_Size.XL}px` : `${theme.Font_Size.MD}px`};
+
+  transition: font-size 0.2s ease-in-out;
 `;
 
-export const DateItem = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background-color: ${({ theme }) => theme.Colors.Orange_500};
-  width: 15%;
-  max-width: 200px;
-  height: 100%;
-  border-radius: 32px;
-  cursor: pointer;
-`;
 
 export const SelectTrigger = styled(Select.Trigger)`
   all: unset;
-  background-color: ${({ theme }) => theme.Colors.Primary};
-  color: white;
-  padding: 10px 16px;
-  border-radius: 22px;
+  background-color: ${({ theme }) => theme.Colors.Orange_500};
+  color: ${({ theme }) => theme.Colors.White};
+  border-radius: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 100%;
+  width: 15%;
+  min-width: 150px;
+  height: 100%;
   font-family: ${({ theme }) => theme.Font_Family.Regular};
   font-size: ${({ theme }) => theme.Font_Size.MD}px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const SelectContent = styled(Select.Content)`
@@ -90,10 +105,14 @@ export const SelectContent = styled(Select.Content)`
   padding: 8px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
   background-color: ${({ theme }) => theme.Colors.Orange_500};
+  font-family: ${({ theme }) => theme.Font_Family.Regular};
+
+  min-width: 100px;
 `;
 
 export const SelectViewport = styled(Select.Viewport)`
   padding: 4px;
+  width: 150px;
 `;
 
 export const SelectItem = styled(Select.Item)`
@@ -101,11 +120,7 @@ export const SelectItem = styled(Select.Item)`
   border-radius: 4px;
   cursor: pointer;
   font-family: ${({ theme }) => theme.Font_Family.Regular};
-  color: black;
-
-  &:hover {
-    background-color: #eee;
-  }
+  color: ${({ theme }) => theme.Colors.White};
 `;
 
 export const SelectIcon = styled(Select.Icon)`
