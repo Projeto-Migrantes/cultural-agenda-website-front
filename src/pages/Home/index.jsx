@@ -7,6 +7,7 @@ function Home() {
     <S.Container>
        <Hero />
       <Navbar />
+      <div style={{ height: "100vh", background: "white"}}></div>
     </S.Container>
   );
 }

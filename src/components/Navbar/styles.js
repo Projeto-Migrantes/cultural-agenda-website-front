@@ -7,7 +7,7 @@ export const NavbarContainer = styled.div`
   display: flex;
   margin: -32px 48px 0 48px;
   border-radius: 9999px;
-  position: fixed;
+  position: absolute;
   z-index: 999999;
   width: calc(100% - 96px);
   height: 62px;
@@ -17,6 +17,7 @@ export const NavbarContainer = styled.div`
    background-color: ${({ theme }) => theme.Colors.Blue_300};
 
   @media (max-width: 768px) {
+    position: fixed;
     margin: 0;
     bottom: 0px;
     height: 100px;
