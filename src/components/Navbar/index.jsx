@@ -10,7 +10,6 @@ function Navbar() {
   const currentMonthIndex = currentDate.getMonth();
   const [selectedMonth, setSelectedMonth] = useState(currentMonthIndex);
   const [activeTab, setActiveTab] = useState("events");
-  console.log(`SelectedMonth: ${selectedMonth}`);
 
   const monthNames = Array.from({ length: 12 - currentMonthIndex }, (_, i) =>
     format(setMonth(new Date(), currentMonthIndex + i), "MMMM", { locale: ptBR })
