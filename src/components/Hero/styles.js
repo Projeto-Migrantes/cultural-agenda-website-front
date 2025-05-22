@@ -95,6 +95,7 @@ export const ImageSection = styled.div`
   @media (min-width: 769px) and (max-width: 1360px) {
     img {
       margin-top: 24vh;
+      width: 100%;
     }
   }
 
