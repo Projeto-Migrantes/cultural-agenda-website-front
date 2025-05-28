@@ -9,6 +9,16 @@ function Home() {
       <S.Container>
         <Hero />
         <Navbar />
+
+        <p>ISSO É UM EXEMPLO DE TEXTO -- OS CARDS VÃO FICAR AQUI </p>
+        <p>ISSO É UM EXEMPLO DE TEXTO -- OS CARDS VÃO FICAR AQUI </p>
+        <p>ISSO É UM EXEMPLO DE TEXTO -- OS CARDS VÃO FICAR AQUI </p>
+        <p>ISSO É UM EXEMPLO DE TEXTO -- OS CARDS VÃO FICAR AQUI </p>
+        <p>ISSO É UM EXEMPLO DE TEXTO -- OS CARDS VÃO FICAR AQUI </p>
+        <p>ISSO É UM EXEMPLO DE TEXTO -- OS CARDS VÃO FICAR AQUI </p>
+        <p>ISSO É UM EXEMPLO DE TEXTO -- OS CARDS VÃO FICAR AQUI </p>
+        <p>ISSO É UM EXEMPLO DE TEXTO -- OS CARDS VÃO FICAR AQUI </p>
+        <p>ISSO É UM EXEMPLO DE TEXTO -- OS CARDS VÃO FICAR AQUI </p>
         <Footer />
       </S.Container>
     </>

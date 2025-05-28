@@ -8,7 +8,7 @@ function Hero() {
   return (
     <S.HeroContainer>
       <S.LoginBox as={Link} to="/login">
-        <S.TextLogin>Login / Cadastre-se</S.TextLogin>
+        <S.TextLogin>Login</S.TextLogin>
         <S.ProfileIcon />
       </S.LoginBox>
       <S.TextSection>
