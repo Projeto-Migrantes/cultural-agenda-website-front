@@ -6,7 +6,7 @@ export const Container = styled.div`
   
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.Colors.Blue_500};
+  /* background-color: ${({ theme }) => theme.Colors.Blue_500}; */
 `;
 
 export const Title = styled.h1`

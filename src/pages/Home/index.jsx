@@ -1,17 +1,18 @@
 import * as S from "./styles.js";
 import Hero from "../../components/Hero/index.jsx";
 import Navbar from "../../components/Navbar/index.jsx";
-
+import Footer from "@components/Footer/index.jsx";
 
 function Home() {
   return (
-    <S.Container>
-       <Hero />
-      <Navbar />
-    </S.Container>
-  
-  
+    <>
+      <S.Container>
+        <Hero />
+        <Navbar />
+        <Footer />
+      </S.Container>
+    </>
   );
 }
 
-export default Home
+export default Home;
