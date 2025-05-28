@@ -116,8 +116,8 @@ export const LoginBox = styled.button`
   position: absolute;
   top: 0;
   right: 0;
-  width: 280px;
-  height: 100px;
+  width: 200px;
+  height: 80px;
 
   font-size: ${({ theme }) => theme.Font_Size.MD}px;
   color: white;

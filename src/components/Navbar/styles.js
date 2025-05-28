@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import * as Select from '@radix-ui/react-select';
+import * as Select from "@radix-ui/react-select";
 export const SelectRoot = Select.Root;
-
 
 export const NavbarContainer = styled.div`
   display: flex;
@@ -14,12 +13,11 @@ export const NavbarContainer = styled.div`
 
   justify-content: space-between;
   align-items: center;
-   background-color: ${({ theme }) => theme.Colors.Blue_300};
+  background-color: ${({ theme }) => theme.Colors.Blue_300};
 
   @media (max-width: 768px) {
-    position: fixed;
+    position: absolute;
     margin: 0;
-    bottom: 0px;
     height: 100px;
     width: 100%;
     flex-direction: column;
@@ -34,7 +32,7 @@ export const Logo = styled.img`
 
 export const NavLinks = styled.div`
   display: flex;
-  gap: 16px;  
+  gap: 16px;
   color: ${({ theme }) => theme.Colors.White};
   font-size: 18px;
   font-weight: bold;
