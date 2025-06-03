@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 
 export const TituloText = styled.h1`
-  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
   color: #002f6c;
@@ -15,7 +15,7 @@ export const TituloText = styled.h1`
 `;
 
 export const Descricao = styled.p`
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1.1rem;
   color: #111;
   line-height: 1.6;

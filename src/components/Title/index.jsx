@@ -1,13 +1,10 @@
 import * as S from './style';
 
-export function Titulo() {
+export function Titulo({ titulo, descricao }) {
   return (
     <S.Container>
-      <S.TituloText>Cadastre-se</S.TituloText>
-      <S.Descricao>
-        Lorem ipsum dolor sit amet consectetur. Sodales porttitor dui donec in ipsum. <br />
-        Consectetur aliquet aliquet aliquam pharetra erat orci. Volutpat risus magna.
-      </S.Descricao>
+      <S.TituloText>{titulo}</S.TituloText>
+      <S.Descricao>{descricao}</S.Descricao>
     </S.Container>
   );
 }
