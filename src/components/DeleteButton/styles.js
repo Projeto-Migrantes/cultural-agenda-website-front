@@ -21,13 +21,13 @@ export const Button = styled.button`
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
 
+  .trashIcon {
+    font-size: 28px;
+  }
+
   &:hover {
     background-color: #eb0000;
     color: ${({ theme }) => theme.Colors.White};
-
-    img {
-      display: none;
-    }
   }
 
   @media (max-width: 550px) {

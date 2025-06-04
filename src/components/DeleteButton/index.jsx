@@ -1,10 +1,10 @@
 import * as S from "./styles";
-import trashIcon from '../../assets/trashIcon.png';
+import { BiTrash } from "react-icons/bi";
 
 export function DeleteButton({ onDelete }){
     return(
         <S.Button type="button" onClick={onDelete}> Deletar
-            <img src={trashIcon} alt="ícone de lixeira"/>
+            <BiTrash className="trashIcon"/>
         </S.Button>
     );
 }
