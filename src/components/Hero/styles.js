@@ -120,7 +120,7 @@ export const LoginBox = styled.button`
   height: 100px;
 
   font-size: ${({ theme }) => theme.Font_Size.MD}px;
-  color: white;
+  color: ${({ theme }) => theme.Colors.White};
   background-color: ${({ theme }) => theme.Colors.Orange_500};
   font-weight: ${({ theme }) => theme.Font_Weight.Bold};
 
