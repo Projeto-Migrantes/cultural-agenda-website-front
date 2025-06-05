@@ -1,17 +1,18 @@
-import styled from "styled-components/native";
-import { Pressable } from "react-native";
+import styled from "styled-components";
+export const Container = styled.button`
 
-export const Container = styled(Pressable)`
   width: 100%;
   height: 50px;
   border-radius: 99999px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  
+  cursor: pointer;
+  &:active {
+    opacity: 0.8;
+  }
 
-  opacity: ${({ pressed }) => (pressed ? 0.8 : 1)};
-
-  background-color: ${({ variant, theme }) => {
+  background-color: ${({variant, theme}) => {
     switch (variant) {
       case "primary":
         return theme.Colors.Orange_500;
@@ -19,22 +20,20 @@ export const Container = styled(Pressable)`
         return theme.Colors.White;
     }
   }};
-  border-width: 1px;
+  border: 1px solid;
 
-  border-color: ${({ variant, theme }) => {
+  border-color: ${({variant, theme}) => {
     switch (variant) {
       case "primary":
-        return theme.Colors.Orange_500;
+        return theme.Colors.Orange_500
       case "secondary":
-      
         return theme.Colors.Blue_500;
     }
   }};
 `;
-
-export const Title = styled.Text`
-  font-size: ${({ theme }) => theme.Font_Size.LG}px;
-  color: ${({ variant, theme }) => {
+export const Title = styled.span`
+  font-size: ${({theme}) => theme.Font_Size.LG}px;
+  color: ${({variant, theme}) => {
     switch (variant) {
       case "primary":
         return theme.Colors.White;
@@ -43,7 +42,7 @@ export const Title = styled.Text`
     }
   }};
 
-  font-family: ${({ variant, theme }) => {
+  font-family: ${({variant, theme}) => {
     switch (variant) {
       case "primary":
         return theme.Font_Family.Bold;
@@ -51,6 +50,5 @@ export const Title = styled.Text`
         return theme.Font_Family.Regular;
     }
   }};
-
   text-align: center;
 `;
