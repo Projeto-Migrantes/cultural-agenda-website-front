@@ -1,21 +1,21 @@
-import { Header } from "@components/Header/index.jsx";
+import { Header } from "@components/Header";
+import Input from "@components/Input";
 import * as S from "./styles.js";
-import { TitleComponent } from "@components/TitleComponent/index.jsx";
 
 function Profile() {
   return (
     <>
       <Header />
       <S.Container>
-        <TitleComponent
-          title="Página 2 de Profile"
-          description={
-            <>
-              Aqui você pode ver e editar suas informações pessoais. <br />
-              Use os campos abaixo para atualizar seu perfil.
-            </>
-          }
-        />
+        <S.Title>Página 2 de Profile</S.Title>
+        <div style={{ paddingTop: "20px", maxWidth: "400px", width: "100%" }}>
+          <Input
+            label="Nome"
+            placeholder="Digite seu nome"
+            required
+            onChange={(e) => console.log(e.target.value)}
+          />
+        </div>
       </S.Container>
     </>
   );
