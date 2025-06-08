@@ -2,6 +2,7 @@ import { Header } from "@components/Header/index.jsx";
 import * as S from "./styles.js";
 import { TitleComponent } from "@components/TitleComponent/index.jsx";
 import { Button } from "@components/Button/index.jsx";
+import { DeleteButton } from "@components/DeleteButton/index.jsx";
 
 function Profile() {
   return (
@@ -28,6 +29,7 @@ function Profile() {
           onClick={() => alert("Editar Perfil Clicked!")}
         />
       </S.Container>
+      <DeleteButton/>
     </>
   );
 }

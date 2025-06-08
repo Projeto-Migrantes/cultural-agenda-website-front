@@ -13,7 +13,9 @@ export default {
 
     Blue_700: "#0116B9",
 
+    Red_400:"#eb0000",
     Red_500: "#F01717",
+
     Black: "#000000",
     White: "#FFFFFF",
   },
