@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Header = styled.header`
   padding: 2rem;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   background-color: ${({ theme }) => theme.Colors.Blue_500};
