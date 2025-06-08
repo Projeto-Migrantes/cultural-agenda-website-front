@@ -1,7 +1,7 @@
 import { Header } from "@components/Header/index.jsx";
 import * as S from "./styles.js";
 import { TitleComponent } from "@components/TitleComponent/index.jsx";
-import { Button } from "@components/Button/index.jsx";
+import { Button } from "@components/buttontheo/index.jsx";
 
 function Profile() {
   return (
