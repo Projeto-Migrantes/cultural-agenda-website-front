@@ -1,6 +1,5 @@
 import styled from "styled-components";
 export const Container = styled.button`
-
   width: 100%;
   height: 50px;
   border-radius: 99999px;
@@ -12,28 +11,28 @@ export const Container = styled.button`
     opacity: 0.8;
   }
 
-  background-color: ${({variant, theme}) => {
+  background-color: ${({ variant, theme }) => {
     switch (variant) {
       case "primary":
-        return theme.Colors.Orange_500;
+        return theme.Colors.Orange_400;
       case "secondary":
-        return theme.Colors.White;
+        return "transparent";
     }
   }};
   border: 1px solid;
 
-  border-color: ${({variant, theme}) => {
+  border-color: ${({ variant, theme }) => {
     switch (variant) {
       case "primary":
-        return theme.Colors.Orange_500
+        return theme.Colors.Orange_400;
       case "secondary":
         return theme.Colors.Blue_500;
     }
   }};
 `;
 export const Title = styled.span`
-  font-size: ${({theme}) => theme.Font_Size.LG}px;
-  color: ${({variant, theme}) => {
+  font-size: ${({ theme }) => theme.Font_Size.LG}px;
+  color: ${({ variant, theme }) => {
     switch (variant) {
       case "primary":
         return theme.Colors.White;
@@ -42,13 +41,7 @@ export const Title = styled.span`
     }
   }};
 
-  font-family: ${({variant, theme}) => {
-    switch (variant) {
-      case "primary":
-        return theme.Font_Family.Bold;
-      case "secondary":
-        return theme.Font_Family.Regular;
-    }
-  }};
+  font-family: ${({ theme }) => theme.Font_Family.Bold};
+  font-weight: ${({ theme }) => theme.Font_Weight.Bold};
   text-align: center;
 `;
