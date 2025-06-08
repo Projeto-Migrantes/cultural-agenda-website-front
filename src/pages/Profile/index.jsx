@@ -1,6 +1,7 @@
 import { Header } from "@components/Header/index.jsx";
 import * as S from "./styles.js";
 import { TitleComponent } from "@components/TitleComponent/index.jsx";
+import { CheckBox } from "@components/Checkbox/index.jsx";
 
 function Profile() {
   return (
@@ -17,6 +18,7 @@ function Profile() {
           }
         />
       </S.Container>
+      <CheckBox>Aceito o <strong>Termo de Uso</strong> e <strong>Política de Privacidade</strong></CheckBox>
     </>
   );
 }
