@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Container = styled.div`
   display: flex;
@@ -12,7 +11,3 @@ export const Title = styled.h1`
   font-weight: ${({ theme }) => theme.Font_Family.Bold};
 `;
 
-
-export const StyledUserIcon = styled(FontAwesomeIcon)`
-  color: ${({ theme }) => theme.Colors.Black} !important;
-`;

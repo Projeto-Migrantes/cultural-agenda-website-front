@@ -2,7 +2,7 @@ import * as S from "./styles";
 
 function Input({
   label,
-  icon: Icon,
+  icon,
   placeholder = "Digite aqui...",
   type = "text",
   value,
@@ -17,29 +17,28 @@ function Input({
     <S.InputContainer>
       {label && (
         <S.InputLabel required={required} error={error}>
-      {label}
-  
-    </S.InputLabel>
+          {label}
+        </S.InputLabel>
       )}
-      
+
       <S.InputWrapper error={error} disabled={disabled}>
-        {Icon && (
+        {icon && (
           <S.InputIconWrapper>
-            <S.StyledIcon as={Icon} />
+            {icon}
           </S.InputIconWrapper>
         )}
-        
+
         <S.StyledInput
           type={type}
           placeholder={placeholder}
           value={value}
           onChange={onChange}
           disabled={disabled}
-          hasIcon={!!Icon}
+          hasIcon={!!icon}
           {...props}
         />
       </S.InputWrapper>
-      
+
       {error && errorMessage && (
         <S.ErrorMessage>{errorMessage}</S.ErrorMessage>
       )}

@@ -7,7 +7,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Profile />} />
+      <Route path="/profile" element={<Profile />} />
     </Routes>
 
   );

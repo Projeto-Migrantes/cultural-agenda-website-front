@@ -8,15 +8,16 @@ export const InputContainer = styled.div`
 `;
 
 export const InputLabel = styled.label`
-  font-family: ${({ theme }) => theme.Font_Family.Regular};
+  font-family: ${({ theme }) => theme.Font_Family.Bold};
   font-size: ${({ theme }) => theme.Font_Size.LG}px;
-  font-weight: ${({ theme }) => theme.Font_Weight.Regular};
-  color: ${({ theme, error }) => (error ? theme.Colors.Red : theme.Colors.Black)};
+  font-weight: ${({ theme }) => theme.Font_Weight.Bold};
+  color: ${({ theme, error }) =>
+    error ? theme.Colors.Red_500 : theme.Colors.Blue_500};
   margin-bottom: -10px;
   padding-left: 20px;
 
   span {
-    color: ${({ theme }) => theme.Colors.Red};
+    color: ${({ theme }) => theme.Colors.Red_500};
     margin-left: 2px;
   }
 `;
@@ -25,28 +26,31 @@ export const InputWrapper = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  border: 2px solid ${({ theme, error, disabled }) => {
-    if (error) return theme.Colors.Red;
-    if (disabled) return theme.Colors.Gray_500;
-    return theme.Colors.Blue_500;
-  }};
+  border: 2px solid
+    ${({ theme, error, disabled }) => {
+      if (error) return theme.Colors.Red_500;
+      if (disabled) return theme.Colors.Gray_500;
+      return theme.Colors.Blue_500;
+    }};
   border-radius: 25px;
-  background-color: ${({ theme, disabled }) => (disabled ? '#EFEFEF' : theme.Colors.White)};
+  background-color: ${({ theme, disabled }) =>
+    disabled ? "#EFEFEF" : "transparent"};
   transition: all 0.2s ease;
 
   &:hover {
     border-color: ${({ theme, error, disabled }) => {
-      if (error) return theme.Colors.Red;
+      if (error) return theme.Colors.Red_500;
       if (disabled) return theme.Colors.Gray_300;
       return theme.Colors.Blue_500;
     }};
   }
 
   &:focus-within {
-    border-color: ${({ theme, error }) => (error ? theme.Colors.Red : theme.Colors.Blue_500)};
+    border-color: ${({ theme, error }) =>
+      error ? theme.Colors.Red_500 : theme.Colors.Blue_500};
     box-shadow: 0 0 0 3px
       ${({ theme, error }) =>
-        error ? `${theme.Colors.Red}20` : `${theme.Colors.Blue_500}20`};
+        error ? `${theme.Colors.Red_500}20` : `${theme.Colors.Blue_500}20`};
   }
 `;
 
@@ -61,7 +65,7 @@ export const InputIconWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 16px;
-  color: ${({ theme }) => theme.Colors.Gray_500};
+  color: ${({ theme }) => theme.Colors.Orange_500};
   pointer-events: none;
 `;
 
@@ -69,9 +73,9 @@ export const StyledInput = styled.input`
   flex: 1;
   border: none;
   outline: none;
-  padding: 16px 16px 16px ${({ hasIcon }) => (hasIcon ? '0' : '16px')};
+  padding: 16px 16px 16px ${({ hasIcon }) => (hasIcon ? "0" : "16px")};
   font-size: ${({ theme }) => theme.Font_Size.MD}px;
-  color: ${({ theme }) => '#454444'};
+  color: ${({ theme }) => "#454444"};
   background: transparent;
   border-radius: 12px;
 
@@ -92,6 +96,7 @@ export const StyledInput = styled.input`
 
 export const ErrorMessage = styled.span`
   font-size: ${({ theme }) => theme.Font_Size.XS}px;
-  color: ${({ theme }) => theme.Colors.Red};
-  margin-top: 4px;
+  color: ${({ theme }) => theme.Colors.Red_500};
+  font-weight: ${({ theme }) => theme.Font_Weight.Bold};
+  margin-left: 20px;
 `;
