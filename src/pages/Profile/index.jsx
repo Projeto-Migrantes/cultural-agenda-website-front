@@ -3,18 +3,21 @@ import Input from "@components/Input";
 import * as S from "./styles.js";
 import { Button } from "@components/Button/index.jsx";
 import { DeleteButton } from "@components/DeleteButton/index.jsx";
+import { BiTrash } from "react-icons/bi";
 
 function Profile() {
   return (
     <>
       <Header />
       <S.Container>
-        <S.Title>Página 2 de Profile</S.Title>
         <div style={{ paddingTop: "20px", maxWidth: "400px", width: "100%" }}>
           <Input
             label="Nome"
+            icon={<BiTrash  />}
             placeholder="Digite seu nome"
             required
+            error 
+            errorMessage="Este campo é obrigatório"
             onChange={(e) => console.log(e.target.value)}
           />
         </div>
