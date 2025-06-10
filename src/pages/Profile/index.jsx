@@ -1,8 +1,11 @@
-import { Header } from "@components/Header/index.jsx";
+import { Header } from "@components/Header";
+import Input from "@components/Input";
 import * as S from "./styles.js";
+import { BiTrash } from "react-icons/bi";
 import { TitleComponent } from "@components/TitleComponent/index.jsx";
 import { Button } from "@components/Button/index.jsx";
-import { DeleteButton } from "@components/DeleteButton/index.jsx";
+
+const UserIcon = () => <S.StyledUserIcon icon={faUser} />;
 
 function Profile() {
   return (
@@ -28,8 +31,17 @@ function Profile() {
           title="Editar Perfil 2"
           onClick={() => alert("Editar Perfil Clicked!")}
         />
+
+        <div style={{ paddingTop: "20px", maxWidth: "400px", width: "100%" }}>
+          <Input
+            label="Nome"
+            placeholder="Digite seu nome"
+            icon={<BiTrash className="trashIcon" />}
+            required
+            onChange={(e) => console.log(e.target.value)}
+          />
+        </div>
       </S.Container>
-      <DeleteButton/>
     </>
   );
 }
