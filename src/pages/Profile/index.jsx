@@ -4,6 +4,7 @@ import * as S from "./styles.js";
 import { BiTrash } from "react-icons/bi";
 import { TitleComponent } from "@components/TitleComponent/index.jsx";
 import { Button } from "@components/Button/index.jsx";
+import SectionDivider from "@components/SectionDivider/index.jsx";
 
 const UserIcon = () => <S.StyledUserIcon icon={faUser} />;
 
@@ -41,6 +42,18 @@ function Profile() {
             onChange={(e) => console.log(e.target.value)}
           />
         </div>
+
+        <SectionDivider
+          title="Minha Seção"
+          actionLabel="Adicionar"
+          onAction={() => alert("Ação clicada!")}
+        />
+
+        <SectionDivider
+          title="Minha Seção"
+          
+          onAction={() => alert("Excluir clicado!")}
+        />
       </S.Container>
     </>
   );
