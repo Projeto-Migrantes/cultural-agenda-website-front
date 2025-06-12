@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Header } from "@components/Header";
 import Input from "@components/Input";
 import * as S from "./styles.js";
@@ -10,6 +11,13 @@ const UserIcon = () => <S.StyledUserIcon icon={faUser} />;
 import { CheckBox } from "@components/Checkbox/index.jsx";
 
 function Profile() {
+  const [isChecked, setIsChecked] = useState(false);
+
+  function handleCheckboxChange(){
+    setIsChecked(!isChecked);
+  }
+
+
   return (
     <>
       <Header />
@@ -56,7 +64,7 @@ function Profile() {
           onAction={() => alert("Excluir clicado!")}
         />
       </S.Container>
-      <CheckBox>Aceito o <strong>Termo de Uso</strong> e <strong>Política de Privacidade</strong></CheckBox>
+      <CheckBox isChecked={isChecked} handleOnChange={handleCheckboxChange}>Aceito o <strong>Termo de Uso</strong> e <strong>Política de Privacidade</strong></CheckBox>
     </>
   );
 }
