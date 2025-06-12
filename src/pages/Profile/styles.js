@@ -10,3 +10,4 @@ export const Title = styled.h1`
   font-size: ${({ theme }) => theme.Font_Size.XXL}px;
   font-weight: ${({ theme }) => theme.Font_Family.Bold};
 `;
+
