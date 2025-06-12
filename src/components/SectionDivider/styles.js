@@ -12,7 +12,7 @@ export const DividerContainer = styled.div`
 
 export const Title = styled.h2`
   font-size: 1.3rem;
-  font-weight: ${({ theme }) => theme.Font_Weight.Bold};
+  font-weight: ${({ theme }) => theme.Font_Weight.ExtraBold};
   color: ${({ theme }) => theme.Colors.Blue_900};
   margin: 0;
   white-space: nowrap;
@@ -32,7 +32,7 @@ export const ActionLink = styled.button`
   border: none;
   color: ${({ theme }) => theme.Colors.Blue_300};
   font-size: 0.85rem;
-  font-weight: ${({ theme }) => theme.Font_Weight.Regular};
+  font-weight: ${({ theme }) => theme.Font_Weight.Bold};
   font-family: ${({ theme }) => theme.Font_Family.Regular};
   cursor: pointer;
   white-space: nowrap;
