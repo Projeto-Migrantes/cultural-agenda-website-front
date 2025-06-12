@@ -6,9 +6,8 @@ import { BiTrash } from "react-icons/bi";
 import { TitleComponent } from "@components/TitleComponent/index.jsx";
 import { Button } from "@components/Button/index.jsx";
 import SectionDivider from "@components/SectionDivider/index.jsx";
-
-const UserIcon = () => <S.StyledUserIcon icon={faUser} />;
 import { CheckBox } from "@components/Checkbox/index.jsx";
+
 
 function Profile() {
   const [isChecked, setIsChecked] = useState(false);
@@ -16,7 +15,6 @@ function Profile() {
   function handleCheckboxChange(){
     setIsChecked(!isChecked);
   }
-
 
   return (
     <>
